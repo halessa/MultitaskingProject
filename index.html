@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multitasking Between Males And Females</title>
+    <!-- Load JQuery -->
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <meta charset="utf-8">
+
+    <style>
+    </style>
+
+</head>
+
+<body>
+    <h1>Multitasking Between Males And Females</h1>
+    <h3> This data is a result of 1000 audult interviews to compare multi-tasking between males and females. The main reason of using double column charts is to view differences between each gender.</h3>
+    <div id="chart-A" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+    <div id="chart-B" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+    <div id="chart-C" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+    <script>
+$(function() 
+{ 
+    var myChart = Highcharts.chart('chart-A', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Are you a multi-tasker or someone who focuses on one thing at a time?'
+        },
+        
+        subtitle: {
+            text: 'Source: Yougov.com'
+        },
+        
+        xAxis: {
+            categories: [ 'I am a multi-tasker', 'I focus on one thing at a time','Not sure'],
+         crosshair: true
+        },
+        
+         
+        yAxis: {
+         	min: 0,
+            title: {
+                 text: '(%)'
+            }
+        },
+        
+        tooltip: {
+            shared: true,
+            useHTML: true
+        },
+        
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        
+        series: [{
+           name: 'Males',
+            color: '#060e76', 
+            data: [58, 32, 10]
+        }, {
+            name: 'Females',
+            color: '#6f192a',
+            data: [69, 22, 9]
+        }]
+    });
+    
+    
+   var myChart2 = Highcharts.chart('chart-B', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'If you have to do two things at once, what best describes the result?'
+        },
+        
+        subtitle: {
+            text: 'Source: Yougov.com'
+        },
+        
+        xAxis: {
+            categories: [ 'Both things get done well', 'Only one of the things gets done well','Nothing gets done well','Not sure'],
+         crosshair: true
+        },
+        
+         
+        yAxis: {
+         	min: 0,
+            title: {
+                 text: '(%)'
+            }
+        },
+        
+        tooltip: {
+            shared: true,
+            useHTML: true
+        },
+        
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        
+        series: [{
+           name: 'Males',
+            color: '#060e76', 
+            data: [61, 23, 7, 10]
+        }, {
+            name: 'Females',
+            color: '#6f192a',
+            data: [68, 15, 7, 11]
+        }]
+    });
+    
+    
+      var myChart3 = Highcharts.chart('chart-C', {
+        chart: {
+            type: 'column'
+        },
+        title: {
+            text: 'Do you think it is possible or impossible for people to undertake multiple tasks at once, and do all of them well?'
+        },
+        
+        subtitle: {
+            text: 'Source: Yougov.com'
+        },
+        
+        xAxis: {
+            categories: [ 'Possible', 'impossible','Not sure'],
+         crosshair: true
+        },
+        
+         
+        yAxis: {
+         	min: 0,
+            title: {
+                 text: '(%)'
+            }
+        },
+        
+        tooltip: {
+            shared: true,
+            useHTML: true
+        },
+        
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderWidth: 0
+            }
+        },
+        
+        series: [{
+           name: 'Males',
+            color: '#060e76', 
+            data: [79, 11, 11]
+        }, {
+            name: 'Females',
+            color: '#6f192a',
+            data: [71, 10, 18]
+        }]
+    });
+    
+     
+    
+    
+});
+    </script>
+
+</body>
+<footer>
+  <p>Posted by: Hind Alessa</p>
+  <p>Contact information: <a href="mailto:halessa@sva.edu">
+  halessa@sva.edu</a>.</p>
+</footer>
+
+</html>
